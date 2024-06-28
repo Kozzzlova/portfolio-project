@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Menu } from '../../components/menu/Menu';
 import { Icon } from '../../components/icon/Icon';
+import { Theme } from '../../styles/Theme';
 
 export const Footer = () => {
    return (

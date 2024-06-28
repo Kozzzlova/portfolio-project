@@ -3,6 +3,7 @@ import photo from '../../../assets/images/photo.png';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
+import { Theme } from '../../../styles/Theme';
 
 export const Main = () => {
    return (
@@ -23,9 +24,9 @@ export const Main = () => {
    );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.main`
    min-height: 70vh;
-   background-color: #b4cee6;
+   background-color: ${Theme.colors.lightBg};
 `;
 
 const MainTItle = styled.h1``;
