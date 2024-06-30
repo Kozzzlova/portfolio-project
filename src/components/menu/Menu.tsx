@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledButton } from '../button/Button';
 import { Theme } from '../../styles/Theme';
 
 export const Menu = (props: { menuItems: Array<string> }) => {
@@ -21,7 +20,6 @@ export const Menu = (props: { menuItems: Array<string> }) => {
                   );
                })}
             </ul>
-            <StyledButton>Let's talk</StyledButton>
          </StyledMenu>
       </div>
    );

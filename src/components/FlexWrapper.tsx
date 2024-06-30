@@ -6,6 +6,8 @@ type FlexWrapperPropsType = {
    align?: string;
    wrap?: string;
    gap?: string;
+   rowGap?: string;
+   colGap?: string;
    width?: string;
 };
 
@@ -16,5 +18,7 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
    align-items: ${(props) => props.align || 'stretch'};
    flex-wrap: ${(props) => props.wrap || 'no-wrap'};
    gap: ${(props) => props.gap || '0px'};
+   row-gap: ${(props) => props.rowGap || '0px'};
+   column-gap: ${(props) => props.colGap || '0px'};
    width: ${(props) => props.width || 'auto'};
 `;

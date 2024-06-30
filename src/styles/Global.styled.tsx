@@ -20,6 +20,9 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  ::-webkit-scrollbar {
+  width: 0;
+}
 }
 
 a {
@@ -40,9 +43,9 @@ button {
     border: none;
 }
 
-section:nth-of-type(even){
+/* section:nth-of-type(even){
     background-color: ${Theme.colors.lightBg};
-}
+} */
 section:nth-of-type(odd){
     background-color: ${Theme.colors.darkBg};
     color: ${Theme.colors.lightText};

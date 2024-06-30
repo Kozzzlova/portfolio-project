@@ -5,6 +5,7 @@ import { Menu } from '../../components/menu/Menu';
 import { Theme } from '../../styles/Theme';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { StyledButton } from '../../components/button/Button';
 
 const items = ['Projects', 'About', 'Digital Assets'];
 
@@ -17,7 +18,13 @@ export const Header = () => {
                   justify='space-between'
                   align='center'>
                   <Logo />
-                  <Menu menuItems={items} />
+                  <FlexWrapper
+                     justify='flex-end'
+                     align='center'
+                     colGap='32px'>
+                     <Menu menuItems={items} />
+                     <StyledButton btnType='primary'>Let's talk</StyledButton>
+                  </FlexWrapper>
                </FlexWrapper>
             </Container>
          </StyledHeader>

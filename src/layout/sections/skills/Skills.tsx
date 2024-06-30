@@ -6,12 +6,17 @@ import { Skill } from './skill/Skill';
 export const Skills = () => {
    return (
       <StyledSkills>
-         <FlexWrapper
-            wrap='wrap'
-            gap='8px'>
+         <SkillsWrapper
+         // wrap='wrap'
+         // justify='stretch'
+         // colGap='8px'
+         // rowGap='59px'>
+         >
             <Skill
                title='React'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
+               sint! Labore, maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
@@ -28,6 +33,8 @@ export const Skills = () => {
                title='HTML'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
+               sint! Labore, maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
                title='CSS'
@@ -39,12 +46,22 @@ export const Skills = () => {
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
-         </FlexWrapper>
+         </SkillsWrapper>
       </StyledSkills>
    );
 };
 
 const StyledSkills = styled.section`
    background-color: black;
-   min-height: 50vh;
+   padding: 102px 52px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+`;
+
+const SkillsWrapper = styled.div`
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   row-gap: 59px;
+   column-gap: 8px;
 `;

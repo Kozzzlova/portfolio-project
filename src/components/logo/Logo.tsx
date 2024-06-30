@@ -5,17 +5,21 @@ import logo from '../../assets/images/logo.png';
 
 export const Logo = () => {
    return (
-      <div>
-         <a href=''>
-            {/* <Icon iconId={'facebookSvg'} /> */}
-            <Image
-               width='59px'
-               height='49px'
-               src={logo}></Image>
-         </a>
-      </div>
+      <LogoLink href='#'>
+         {/* <Icon iconId={'facebookSvg'} /> */}
+         <Image
+            width='59px'
+            height='49px'
+            src={logo}></Image>
+      </LogoLink>
    );
 };
+
+const LogoLink = styled.a`
+   display: flex;
+   align-items: center;
+   justify-content: center;
+`;
 
 const Image = styled.img`
    width: ${(props) => props.width};
