@@ -23,7 +23,12 @@ export const Header = () => {
                      align='center'
                      colGap='32px'>
                      <Menu menuItems={items} />
-                     <StyledButton btnType='primary'>Let's talk</StyledButton>
+                     <StyledButton
+                        href='#'
+                        as={'a'}
+                        btnType='link'>
+                        Let's talk
+                     </StyledButton>
                   </FlexWrapper>
                </FlexWrapper>
             </Container>

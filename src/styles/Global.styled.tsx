@@ -11,6 +11,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
+*::selection {
+     background-color: ${Theme.colors.darkBg};
+    color: ${Theme.colors.lightText};
+}
     body {
   margin: 0;
   line-height: 1.2;
@@ -20,6 +25,8 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
   ::-webkit-scrollbar {
   width: 0;
 }
@@ -43,12 +50,15 @@ button {
     border: none;
 }
 
-/* section:nth-of-type(even){
-    background-color: ${Theme.colors.lightBg};
-} */
+
 section:nth-of-type(odd){
     background-color: ${Theme.colors.darkBg};
     color: ${Theme.colors.lightText};
+
+    *::selection {
+        background-color: ${Theme.colors.lightBg};
+         color: ${Theme.colors.darkBg};
+    }
 }
 
 

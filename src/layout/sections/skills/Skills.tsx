@@ -13,6 +13,7 @@ export const Skills = () => {
          // rowGap='59px'>
          >
             <Skill
+               order={1}
                title='React'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
@@ -20,16 +21,19 @@ export const Skills = () => {
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
+               order={2}
                title='Styled Components'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
+               order={3}
                title='Figma '
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
+               order={4}
                title='HTML'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
@@ -37,11 +41,13 @@ export const Skills = () => {
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
+               order={5}
                title='CSS'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
                sint! Labore, maxime?'></Skill>
             <Skill
+               order={6}
                title='Design'
                description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
@@ -61,7 +67,7 @@ const StyledSkills = styled.section`
 
 const SkillsWrapper = styled.div`
    display: grid;
-   grid-template-columns: repeat(3, auto);
+   grid-template-columns: repeat(3, 1fr);
    row-gap: 59px;
    column-gap: 8px;
 `;

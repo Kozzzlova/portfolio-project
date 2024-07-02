@@ -5,45 +5,45 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
+import { Letter } from '../../../components/letter/Letter';
+
+const titleString = 'UI/UX designer based in UK';
+const titleMap = Array.from(titleString);
 
 export const Main = () => {
    return (
       <StyledMain>
          <Container>
             <TitleWrapper>
-               <SectionTitle maxWidth='660px'>HELLO I’M ABBY</SectionTitle>
-               <Circle>
-                  {' '}
-                  <MainTItle>
-                     <Letter>U</Letter>
-                     <Letter>I</Letter>
-                     <Letter>/</Letter>
-                     <Letter>U</Letter>
-                     <Letter>X</Letter>
-                     <Letter> </Letter>
-                     <Letter>d</Letter>
-                     <Letter>e</Letter>
-                     <Letter>s</Letter>
-                     <Letter>i</Letter>
-                     <Letter>g</Letter>
-                     <Letter>n</Letter>
-                     <Letter>e</Letter>
-                     <Letter>r</Letter>
-                     <Letter> </Letter>
-                     <Letter>b</Letter>
-                     <Letter>a</Letter>
-                     <Letter>s</Letter>
-                     <Letter>e</Letter>
-                     <Letter>d</Letter>
-                     <Letter> </Letter>
-                     <Letter>i</Letter>
-                     <Letter>n</Letter>
-                     <Letter> </Letter>
-                     <Letter>U</Letter>
-                     <Letter>K</Letter>
-                     {/* UI/UX designer based in UK */}
-                  </MainTItle>
-               </Circle>
+               <SectionTitle maxWidth='660px'>HELLO I’M ABBY</SectionTitle>{' '}
+               <MainTItle>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+                  <Letter item={'U'}></Letter>
+               </MainTItle>
             </TitleWrapper>
             <PhotoWrapper>
                {' '}
@@ -70,27 +70,29 @@ const TitleWrapper = styled.div`
    z-index: 3;
 `;
 
-const Circle = styled.div`
-   position: relative;
-   width: 400px;
-   border-radius: 50%;
-   transform: rotate(-50deg);
-   height: 110px;
-`;
-
 const MainTItle = styled.h1`
    font-size: 52px;
    font-weight: 300;
-   text-align: left;
-`;
 
-const Letter = styled.span`
-   height: 200px;
-   position: absolute;
-   width: 20px;
-   left: 0;
-   top: 0;
-   transform-origin: bottom center;
+   position: relative;
+   width: 655px;
+   height: 193px;
+   border-radius: 50%;
+   background: #926565;
+   border: 10px solid burlywood;
+   text-align: center;
+   line-height: 192px;
+   font-size: 22px;
+
+   user-select: none;
+
+   /* position: relative;
+   width: 655px;
+   height: 300px;
+   border-radius: 50%;
+   background-color: aliceblue;
+   z-index: 2;
+   transform: rotate(180deg) scaleX(-1); */
 `;
 
 const PhotoWrapper = styled.div`

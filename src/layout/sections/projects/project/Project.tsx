@@ -121,10 +121,15 @@ const ProjectText = styled.p`
 `;
 const ProjectLink = styled.a`
    display: flex;
-   align-items: center;
+
    gap: 4px;
 
    &:hover {
       font-weight: 600;
+   }
+
+   :hover svg {
+      stroke-width: 1px;
+      stroke: ${Theme.colors.lightMain};
    }
 `;

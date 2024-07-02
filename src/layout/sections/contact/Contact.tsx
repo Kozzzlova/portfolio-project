@@ -82,12 +82,12 @@ const ContactField = styled.input.attrs((props) => ({
 }))`
    max-width: 257px;
    width: 100%;
-   padding: 12px;
+   padding: 11px;
    color: ${Theme.colors.darkMain};
    border: 1px solid;
    font-family: Epilogue;
    font-size: 16px;
-   line-height: 24px;
+   line-height: 1.5;
    &:hover {
       outline: 2px solid;
       outline-offset: -2px;
