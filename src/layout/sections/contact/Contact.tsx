@@ -85,7 +85,7 @@ const ContactField = styled.input.attrs((props) => ({
    padding: 11px;
    color: ${Theme.colors.darkMain};
    border: 1px solid;
-   font-family: Epilogue;
+   font-family: Epilogue, sans-serif;
    font-size: 16px;
    line-height: 1.5;
    &:hover {

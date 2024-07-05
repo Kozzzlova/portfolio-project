@@ -4,8 +4,11 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Project } from './project/Project';
 import projectFirstImg from '../../../assets/images/proj-1.webp';
+import projectFirstImg2x from '../../../assets/images/proj-1@2x.png';
 import projectSecondImg from '../../../assets/images/proj-2.webp';
+import projectSecondImg2x from '../../../assets/images/proj-2@2x.png';
 import projectThirdImg from '../../../assets/images/proj-3.webp';
+import projectThirdImg2x from '../../../assets/images/proj-3@2x.png';
 import { Container } from '../../../components/Container';
 export const Projects = () => {
    return (
@@ -21,22 +24,25 @@ export const Projects = () => {
                   align='stretch'>
                   <Project
                      subtitle='Mental Health'
-                     titleSpan='A Case Study_'
+                     titleSpan='A Case Study'
                      title='Find Peace in Meditation'
                      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.'
-                     src={projectFirstImg}></Project>
+                     src={projectFirstImg}
+                     src2x={projectFirstImg2x}></Project>
                   <Project
                      subtitle='Fashion Show'
-                     titleSpan='A Case Study_'
+                     titleSpan='A Case Study'
                      title='Enjoy Fashion Shows From Home'
                      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.'
-                     src={projectSecondImg}></Project>
+                     src={projectSecondImg}
+                     src2x={projectSecondImg2x}></Project>
                   <Project
                      subtitle='Barbeque'
-                     titleSpan='Branding_'
+                     titleSpan='Branding'
                      title='Chicken Barbeque Never Goes Wrong'
                      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.'
-                     src={projectThirdImg}></Project>
+                     src={projectThirdImg}
+                     src2x={projectThirdImg2x}></Project>
                </FlexWrapper>
             </FlexWrapper>
          </Container>

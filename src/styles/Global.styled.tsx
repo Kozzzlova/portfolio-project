@@ -27,9 +27,11 @@ export const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
+
+/*   
   ::-webkit-scrollbar {
   width: 0;
-}
+} */
 }
 
 a {
@@ -51,7 +53,7 @@ button {
 }
 
 
-section:nth-of-type(odd){
+section:nth-of-type(even){
     background-color: ${Theme.colors.darkBg};
     color: ${Theme.colors.lightText};
 

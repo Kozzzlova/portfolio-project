@@ -4,38 +4,28 @@ import { Theme } from '../../styles/Theme';
 
 export const Menu = (props: { menuItems: Array<string> }) => {
    return (
-      <div>
-         <StyledMenu>
-            <ul>
-               {props.menuItems.map((item: string, index: number) => {
-                  return (
-                     <ListItem key={index}>
-                        <Link href='#'>
-                           {item}
-                           <Mask>
-                              <span>{item}</span>
-                           </Mask>
-                        </Link>
-                     </ListItem>
-                  );
-               })}
-            </ul>
-         </StyledMenu>
-      </div>
+      <StyledMenu role='menu'>
+         {props.menuItems.map((item: string, index: number) => {
+            return (
+               <ListItem
+                  role='menuitem'
+                  key={index}>
+                  <Link href='#'>{item}</Link>
+               </ListItem>
+            );
+         })}
+      </StyledMenu>
    );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.ul`
    display: flex;
    justify-content: flex-end;
    align-items: center;
    gap: 32px;
 
-   ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 32px;
+   @media ${Theme.media.tablet} {
+      display: none;
    }
 `;
 
@@ -43,23 +33,10 @@ const Link = styled.a`
    font-size: 16px;
 `;
 
-const Mask = styled.span`
-   position: absolute;
-   top: 0;
-   left: 0;
-   display: inline-block;
-   overflow-y: hidden;
-   color: ${Theme.colors.primary};
-   opacity: 0.5;
-`;
-
 const ListItem = styled.li`
    position: relative;
 
    &:hover {
-      ${Mask} {
-         top: -8px;
-         left: -8px;
-      }
+      text-shadow: -8px -8px rgba(0, 0, 0, 0.3);
    }
 `;

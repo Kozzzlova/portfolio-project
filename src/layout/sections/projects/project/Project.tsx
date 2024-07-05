@@ -9,6 +9,7 @@ type ProjectPropsType = {
    subtitle: string;
    text: string;
    src: string;
+   src2x: string;
 };
 
 export const Project = (props: ProjectPropsType) => {
@@ -16,13 +17,15 @@ export const Project = (props: ProjectPropsType) => {
       <StyledProject>
          <Image
             src={props.src}
-            alt=''
+            alt='Фон проекта'
+            srcSet={`${props.src2x} 2x`}
          />
 
          <ProjectTopic>
             <ProjectSubtitle>{props.subtitle}</ProjectSubtitle>
             <ProjectTitle>
-               <p>{props.titleSpan}</p>
+               <span>{props.titleSpan}_</span>
+               <br />
                {props.title}
             </ProjectTitle>
          </ProjectTopic>
@@ -52,6 +55,7 @@ const StyledProject = styled.div`
    justify-content: space-between;
    gap: 81px;
 
+   /* 
    &::after {
       position: absolute;
       content: '';
@@ -62,7 +66,7 @@ const StyledProject = styled.div`
       z-index: 1;
       top: 0;
       left: 0;
-   }
+   } */
 `;
 
 const Image = styled.img`
@@ -72,6 +76,9 @@ const Image = styled.img`
    height: 100%;
    width: 100%;
    object-fit: cover;
+   filter: brightness(0.5);
+   -ms-filter: brightness(0.5);
+   -webkit-filter: brightness(0.5);
 `;
 
 const ProjectTopic = styled.div`
@@ -92,12 +99,12 @@ const ProjectContent = styled.div`
    flex: 0 0 46%;
 `;
 
-const ProjectSubtitle = styled.h4`
+const ProjectSubtitle = styled.h3`
    font-size: 16px;
    font-weight: 600;
 `;
 
-const ProjectTitle = styled.h3`
+const ProjectTitle = styled.h4`
    font-size: 45px;
    font-weight: 800;
    height: 160px;
@@ -106,7 +113,7 @@ const ProjectTitle = styled.h3`
    -webkit-box-orient: vertical;
    overflow: hidden;
 
-   p {
+   span {
       font-weight: 200;
    }
 `;

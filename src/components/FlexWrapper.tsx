@@ -9,6 +9,8 @@ type FlexWrapperPropsType = {
    rowGap?: string;
    colGap?: string;
    width?: string;
+   grow?: string;
+   shrink?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -21,4 +23,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
    row-gap: ${(props) => props.rowGap || '0px'};
    column-gap: ${(props) => props.colGap || '0px'};
    width: ${(props) => props.width || 'auto'};
+   grow: ${(props) => props.grow || '0'};
+   shrink: ${(props) => props.shrink || '0'};
 `;

@@ -9,4 +9,9 @@ export const Theme = {
       lightText: '#F2F2F2',
       decoration: '#E7E7E7',
    },
+
+   media: {
+      tablet: 'screen and (max-width: 768px)',
+      mobile: 'screen and (max-width: 567px)',
+   },
 };

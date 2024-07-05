@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 import logo from '../../assets/images/logo.png';
+import logo2x from '../../assets/images/logo@2x.png';
 
 export const Logo = () => {
    return (
@@ -10,7 +11,9 @@ export const Logo = () => {
          <Image
             width='59px'
             height='49px'
-            src={logo}></Image>
+            src={logo}
+            alt='Logo'
+            srcSet={`${logo2x} 2x`}></Image>
       </LogoLink>
    );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import photoImg from '../../../assets/images/photo.png';
+import photo2x from '../../../assets/images/photo@2x.png';
 import { Container } from '../../../components/Container';
 
 export const About = () => {
@@ -13,20 +14,24 @@ export const About = () => {
                colGap='63px'>
                {' '}
                <FlexWrapper
-                  width='50%'
-                  direction='column'>
+                  width='532px'
+                  direction='column'
+                  shrink='1'>
                   <AboutTitle>About me</AboutTitle>
                   <AboutSlogan>
                      I look at unusual things with my unsual eyes.
                   </AboutSlogan>
                   <Image
-                     width='532px'
-                     height='498px'
-                     src={photoImg}></Image>
+                     width='100%'
+                     height='42%'
+                     src={photoImg}
+                     srcSet={`${photo2x} 2x`}
+                     alt='my photo'></Image>
                </FlexWrapper>
                <FlexWrapper
-                  width='50%'
-                  direction='column'>
+                  width='440px'
+                  direction='column'
+                  shrink='1'>
                   <AboutText>
                      <AboutParagraph>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -53,9 +58,11 @@ export const About = () => {
                      </AboutParagraph>
                   </AboutText>
                   <Image
-                     width='440px'
-                     height='411px'
-                     src={photoImg}></Image>
+                     width='100%'
+                     height='35%'
+                     src={photoImg}
+                     srcSet={`${photo2x} 2x`}
+                     alt='my photo'></Image>
                </FlexWrapper>
             </FlexWrapper>
          </Container>

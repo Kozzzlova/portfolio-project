@@ -17,7 +17,9 @@ export const Footer = () => {
 
                <SocialList>
                   <SocialItem>
-                     <SocialLink>
+                     <SocialLink
+                        href='#'
+                        aria-label='Ссылка на Facebook'>
                         <Icon
                            width='24px'
                            height='24px'
@@ -29,7 +31,9 @@ export const Footer = () => {
 
                   <SocialItem>
                      {' '}
-                     <SocialLink>
+                     <SocialLink
+                        href='#'
+                        aria-label='Ссылка на Instagram'>
                         <Icon
                            width='24px'
                            height='24px'
@@ -41,7 +45,9 @@ export const Footer = () => {
 
                   <SocialItem>
                      {' '}
-                     <SocialLink>
+                     <SocialLink
+                        href='#'
+                        aria-label='Ссылка на Twitter'>
                         <Icon
                            width='24px'
                            height='24px'
@@ -52,7 +58,9 @@ export const Footer = () => {
                   </SocialItem>
 
                   <SocialItem>
-                     <SocialLink>
+                     <SocialLink
+                        href='#'
+                        aria-label='Ссылка на Linkedin'>
                         <Icon
                            width='24px'
                            height='24px'
