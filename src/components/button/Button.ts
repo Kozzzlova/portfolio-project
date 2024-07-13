@@ -4,6 +4,7 @@ import { css } from 'styled-components';
 
 type StyledBtnPropsType = {
    btnType: 'link' | 'outlined';
+   isOpen?: boolean;
 };
 
 export const StyledButton = styled.button<StyledBtnPropsType>`
@@ -11,6 +12,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
    cursor: pointer;
    font-size: 16px;
    line-height: 1.5;
+
    ${(props) =>
       props.btnType === 'link' &&
       css<StyledBtnPropsType>`
@@ -37,5 +39,11 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
             outline: 2px solid;
             outline-offset: -2px;
          }
+      `}
+
+       ${(props) =>
+      props.isOpen === true &&
+      css<StyledBtnPropsType>`
+         display: none;
       `}
 `;

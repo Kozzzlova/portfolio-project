@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from '../icon/Icon';
 import logo from '../../assets/images/logo.png';
 import logo2x from '../../assets/images/logo@2x.png';
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
    return (
       <LogoLink href='#'>
-         {/* <Icon iconId={'facebookSvg'} /> */}
          <Image
             width='59px'
             height='49px'

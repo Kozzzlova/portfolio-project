@@ -1,42 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Theme } from '../../styles/Theme';
+import { List } from './List';
+import { S } from './Menu_styles';
 
-export const Menu = (props: { menuItems: Array<string> }) => {
-   return (
-      <StyledMenu role='menu'>
-         {props.menuItems.map((item: string, index: number) => {
-            return (
-               <ListItem
-                  role='menuitem'
-                  key={index}>
-                  <Link href='#'>{item}</Link>
-               </ListItem>
-            );
-         })}
-      </StyledMenu>
-   );
+type MenuPropsType = {
+   isOpen: boolean;
+   menuItems: Array<string>;
+   isHidden: boolean;
 };
 
-const StyledMenu = styled.ul`
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   gap: 32px;
-
-   @media ${Theme.media.tablet} {
-      display: none;
-   }
-`;
-
-const Link = styled.a`
-   font-size: 16px;
-`;
-
-const ListItem = styled.li`
-   position: relative;
-
-   &:hover {
-      text-shadow: -8px -8px rgba(0, 0, 0, 0.3);
-   }
-`;
+export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
+   return (
+      <List
+         isHidden={props.isHidden}
+         isOpen={props.isOpen}>
+         {props.menuItems.map((item: string, index: number) => {
+            return (
+               <S.ListItem
+                  role='menuitem'
+                  key={index}>
+                  <S.Link href='#'>{item}</S.Link>
+               </S.ListItem>
+            );
+         })}
+      </List>
+   );
+};

@@ -1,64 +1,53 @@
 import React from 'react';
-import styled from 'styled-components';
-import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Skill } from './skill/Skill';
+import { S } from './Skills_styles';
+
+const skillData = [
+   {
+      title: 'React',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+   {
+      title: 'Styled Components',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+   {
+      title: 'Figma',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+   {
+      title: 'HTML',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+   {
+      title: 'CSS',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+   {
+      title: 'Design',
+      descriprion:
+         'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue',
+   },
+];
 
 export const Skills = () => {
    return (
-      <StyledSkills>
-         <SkillsWrapper>
-            <Skill
-               title='React'
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-            <Skill
-               title='Styled Components'
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-            <Skill
-               title='Figma '
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-            <Skill
-               title='HTML'
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-            <Skill
-               title='CSS'
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-            <Skill
-               title='Design'
-               description='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Accusantium ullam nesciunt nemo vero, quo voluptatibus sequi quis
-               sint! Labore, maxime?'></Skill>
-         </SkillsWrapper>
-      </StyledSkills>
+      <S.Skills>
+         <S.SkillsWrapper>
+            {skillData.map((s, index) => {
+               return (
+                  <Skill
+                     title={s.title}
+                     key={index}
+                     description={s.descriprion}></Skill>
+               );
+            })}
+         </S.SkillsWrapper>
+      </S.Skills>
    );
 };
-
-const StyledSkills = styled.section`
-   background-color: black;
-   padding: 102px 52px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-`;
-
-const SkillsWrapper = styled.ol`
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   row-gap: 59px;
-   column-gap: 8px;
-   list-style: none;
-   counter-reset: example 0;
-`;

@@ -28,6 +28,8 @@ export const GlobalStyle = createGlobalStyle`
   font-weight: 400;
   font-size: 16px;
 
+  /* min-width: 375px; */
+
 /*   
   ::-webkit-scrollbar {
   width: 0;
