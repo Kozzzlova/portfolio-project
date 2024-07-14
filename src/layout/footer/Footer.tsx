@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
                justify='space-between'
                align='center'>
                <Copyright>
-                  <span>2022 Relume.</span>
+                  <span> 2022 Relume.</span>
                   <span> All right reserved.</span>
                </Copyright>
 

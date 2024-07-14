@@ -4,10 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './styles/Global.styled';
-import img from './assets/images/cat.png';
-import img2 from './assets/images/penguine.svg';
-import { Icon } from './components/icon/Icon';
-import styled from 'styled-components';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement

@@ -7,9 +7,9 @@ const items = ['Projects', 'About', 'Digital Assets'];
 
 export const Contact: React.FC = () => {
    return (
-      <S.Contact>
+      <S.Contact id='contact'>
          <Container>
-            <ContactWrapper menuItems={items} />
+            <ContactWrapper />
          </Container>
       </S.Contact>
    );

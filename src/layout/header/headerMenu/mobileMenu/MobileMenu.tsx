@@ -4,9 +4,7 @@ import { StyledButton } from '../../../../components/button/Button';
 import { SocialList } from '../../../../components/socialList/SocialList';
 import { S } from '../HeaderMenu_Styles';
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
-   menuItems: Array<string>;
-}) => {
+export const MobileMenu: React.FC = () => {
    const [menuIsOpen, setmenuIsOpen] = useState(false);
    const onBurgerBtnClick = () => {
       setmenuIsOpen(!menuIsOpen);
@@ -17,7 +15,6 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
          <Menu
             isHidden={true}
             isOpen={menuIsOpen}
-            menuItems={props.menuItems}
          />
          <StyledButton
             isOpen={menuIsOpen}

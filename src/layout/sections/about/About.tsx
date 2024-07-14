@@ -5,7 +5,7 @@ import { S } from './About_styles';
 
 export const About: React.FC = () => {
    return (
-      <S.About>
+      <S.About id='about'>
          <Container>
             <AboutContent />
          </Container>

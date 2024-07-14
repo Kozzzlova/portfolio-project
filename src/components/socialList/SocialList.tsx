@@ -62,6 +62,7 @@ const SocialItem = styled.li`
    align-items: center;
    justify-content: center;
    cursor: pointer;
+   transition: ${Theme.animations.transition};
    &:hover {
       transform: scale(1.3);
    }

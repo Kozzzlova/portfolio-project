@@ -133,16 +133,12 @@ const ProjectText = styled.p`
 `;
 const ProjectLink = styled.a`
    display: flex;
-
    gap: 4px;
+   transition: ${Theme.animations.transition};
+   width: max-content;
 
    &:hover {
-      font-weight: 600;
-   }
-
-   :hover svg {
-      stroke-width: 1px;
-      stroke: ${Theme.colors.lightMain};
+      scale: 1.1;
    }
 `;
 

@@ -5,9 +5,10 @@ import { SectionTitle } from '../../../components/SectionTitle';
 //Main
 
 const Main = styled.section`
-   padding: 133px 0 170px 0;
+   /* padding: 133px 0 170px 0; */
+   padding: 133px 0 380px 0;
    position: relative;
-   overflow-x: hidden;
+   overflow: hidden;
 
    @media ${Theme.media.tablet} {
       padding: 55px 0 415px;
@@ -93,8 +94,9 @@ const MainTItle = styled.h1`
    user-select: none;
    width: 100%;
    max-width: 655px;
-   height: 200px;
-   position: relative;
+   /* height: 200px; */
+   /* position: relative; */
+   position: absolute;
    z-index: 2;
 
    @media ${Theme.media.tablet} {
@@ -112,7 +114,7 @@ const MainTItle = styled.h1`
       font-weight: 300;
       line-height: 1;
       width: 100%;
-      height: 200px;
+      /* height: 200px; */
       @media ${Theme.media.pc} {
          font-size: 44px;
       }

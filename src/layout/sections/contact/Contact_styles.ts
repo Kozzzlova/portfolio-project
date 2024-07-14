@@ -65,14 +65,16 @@ const ContactField = styled.input.attrs((props) => ({
    font-family: Epilogue, sans-serif;
    font-size: 16px;
    line-height: 1.5;
+   outline: 2px solid transparent;
+   outline-offset: -2px;
+   transition: ${Theme.animations.transition};
 
    @media ${Theme.media.tablet} {
       width: 100%;
       max-width: 100%;
    }
    &:hover {
-      outline: 2px solid;
-      outline-offset: -2px;
+      outline-color: ${Theme.colors.darkMain};
    }
    &::placeholder {
       color: ${Theme.colors.primary};

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ElementRef, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Logo } from '../../../../components/logo/Logo';
 import { Menu } from '../../../../components/menu/Menu';
@@ -6,9 +7,29 @@ import { StyledButton } from '../../../../components/button/Button';
 import { S } from '../Contact_styles';
 import Typewriter from 'typewriter-effect';
 
-export const ContactWrapper: React.FC<{ menuItems: Array<string> }> = (props: {
-   menuItems: Array<string>;
-}) => {
+export const ContactWrapper: React.FC = () => {
+   const form = useRef<ElementRef<'form'>>(null);
+
+   const sendEmail = (e: any) => {
+      e.preventDefault();
+
+      if (!form.current) return;
+
+      emailjs
+         .sendForm('service_o8tvnhn', 'template_rgoeve9', form.current, {
+            publicKey: 'Y1-vx7nW5s-I0veq2',
+         })
+         .then(
+            () => {
+               console.log('SUCCESS!');
+            },
+            (error) => {
+               console.log('FAILED...', error.text);
+            }
+         );
+
+      e.target.reset();
+   };
    return (
       <S.ContactWrapper justify={'space-between'}>
          <FlexWrapper
@@ -18,8 +39,7 @@ export const ContactWrapper: React.FC<{ menuItems: Array<string> }> = (props: {
             <Logo></Logo>
             <Menu
                isHidden={false}
-               isOpen={false}
-               menuItems={props.menuItems}></Menu>
+               isOpen={false}></Menu>
          </FlexWrapper>
          <FlexWrapper
             direction='column'
@@ -35,8 +55,13 @@ export const ContactWrapper: React.FC<{ menuItems: Array<string> }> = (props: {
                   }}
                />
             </S.ContactTitle>
-            <S.ContactForm>
-               <S.ContactField placeholder='Enter your email'></S.ContactField>
+            <S.ContactForm
+               ref={form}
+               onSubmit={sendEmail}>
+               <S.ContactField
+                  required
+                  name='user_email'
+                  placeholder='Enter your email'></S.ContactField>
                <StyledButton
                   btnType='outlined'
                   type={'submit'}>

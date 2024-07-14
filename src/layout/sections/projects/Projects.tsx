@@ -6,7 +6,7 @@ import { ProjectsList } from './projectsList/ProjectList';
 import { S } from './Projects_styles';
 export const Projects = () => {
    return (
-      <S.Projects>
+      <S.Projects id='projects'>
          <Container>
             <FlexWrapper
                direction='column'

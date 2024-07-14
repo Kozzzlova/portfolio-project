@@ -1,4 +1,5 @@
 import './App.css';
+import { GoToTop } from './components/goToTop/GoToTop';
 import { Particle } from './components/particle/Particle';
 import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
@@ -19,6 +20,7 @@ function App() {
          <About />
          <Contact />
          <Footer />
+         <GoToTop />
       </div>
    );
 }

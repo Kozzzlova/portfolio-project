@@ -12,6 +12,7 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
    cursor: pointer;
    font-size: 16px;
    line-height: 1.5;
+   transition: ${Theme.animations.transition};
 
    ${(props) =>
       props.btnType === 'link' &&
@@ -34,10 +35,11 @@ export const StyledButton = styled.button<StyledBtnPropsType>`
          padding: 11px 23px;
          background-color: ${Theme.colors.lightMain};
          border: 1px solid;
+         outline: 2px solid transparent;
+         outline-offset: -2px;
 
          &:hover {
-            outline: 2px solid;
-            outline-offset: -2px;
+            outline-color: ${Theme.colors.darkMain};
          }
       `}
 

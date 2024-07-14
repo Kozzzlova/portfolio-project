@@ -37,7 +37,7 @@ const skillData = [
 
 export const Skills = () => {
    return (
-      <S.Skills>
+      <S.Skills id='skills'>
          <S.SkillsWrapper>
             {skillData.map((s, index) => {
                return (

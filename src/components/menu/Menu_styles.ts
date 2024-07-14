@@ -1,6 +1,6 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 import { Theme } from '../../styles/Theme';
+import { Link } from 'react-scroll';
 
 type StyledMenuPropsType = {
    isOpen: boolean;
@@ -49,10 +49,6 @@ const ListItem = styled.li`
    position: relative;
    font-size: 16px;
 
-   &:hover {
-      text-shadow: -8px -8px rgba(0, 0, 0, 0.3);
-   }
-
    @media ${Theme.media.tablet} {
       font-size: 20px;
    }
@@ -61,14 +57,18 @@ const ListItem = styled.li`
    }
 `;
 
-const Link = styled.a`
+const NavLink = styled(Link)`
    width: 100%;
    display: inline-block;
    cursor: pointer;
+   transition: ${Theme.animations.transition};
+   &:hover {
+      text-shadow: -8px -8px rgba(0, 0, 0, 0.3);
+   }
 `;
 
 export const S = {
    Menu,
    ListItem,
-   Link,
+   NavLink,
 };

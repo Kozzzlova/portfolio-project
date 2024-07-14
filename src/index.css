@@ -1,0 +1,27 @@
+svg {
+   width: 800px;
+   height: 800px;
+   transform: rotate(0);
+   animation: anim;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+   25% {
+      transform: rotate(90deg);
+   }
+
+   50% {
+      transform: rotate(180deg);
+   }
+
+   75% {
+      transform: rotate(270deg);
+   }
+
+   100% {
+      transform: rotateX(360deg);
+   }
+}
