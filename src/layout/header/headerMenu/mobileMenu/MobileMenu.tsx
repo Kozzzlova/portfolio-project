@@ -1,35 +1,39 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React, { useState } from 'react';
 import { Menu } from '../../../../components/menu/Menu';
 import { StyledButton } from '../../../../components/button/Button';
 import { SocialList } from '../../../../components/socialList/SocialList';
 import { S } from '../HeaderMenu_Styles';
 
-// const items = ['Projects', 'About', 'Digital Assets'];
-
 export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
    menuItems: Array<string>;
 }) => {
+   const [menuIsOpen, setmenuIsOpen] = useState(false);
+   const onBurgerBtnClick = () => {
+      setmenuIsOpen(!menuIsOpen);
+   };
+
    return (
-      <S.MobileMenu isOpen={false}>
+      <S.MobileMenu isOpen={menuIsOpen}>
          <Menu
             isHidden={true}
-            isOpen={false}
+            isOpen={menuIsOpen}
             menuItems={props.menuItems}
          />
          <StyledButton
-            isOpen={false}
+            isOpen={menuIsOpen}
             href='#'
             as={'a'}
             btnType='link'>
             Let's talk
          </StyledButton>
-         <S.BurgerButton isOpen={false}>
+         <S.BurgerButton
+            isOpen={menuIsOpen}
+            onClick={onBurgerBtnClick}>
             <span>
                <span></span>
             </span>
          </S.BurgerButton>
-         <SocialList isOpen={false} />
+         <SocialList isOpen={menuIsOpen} />
       </S.MobileMenu>
    );
 };

@@ -3,8 +3,9 @@ import { FlexWrapper } from '../../../../components/FlexWrapper';
 import photoImg from '../../../../assets/images/photo.png';
 import photo2x from '../../../../assets/images/photo@2x.png';
 import { S } from '../About_styles';
+import Tilt from 'react-parallax-tilt';
 
-export const AboutContent = () => {
+export const AboutContent: React.FC = () => {
    return (
       <S.AboutContent
          justify='space-between'
@@ -18,11 +19,17 @@ export const AboutContent = () => {
             <S.AboutSlogan>
                I look at unusual things with my unsual eyes.
             </S.AboutSlogan>
-
-            <S.ImageLeft
-               src={photoImg}
-               srcSet={`${photo2x} 2x`}
-               alt='my photo'></S.ImageLeft>
+            <Tilt
+               glareEnable={true}
+               glareMaxOpacity={0.8}
+               glareColor='#0a0202'
+               glarePosition='bottom'
+               glareBorderRadius='0px'>
+               <S.ImageLeft
+                  src={photoImg}
+                  srcSet={`${photo2x} 2x`}
+                  alt='my photo'></S.ImageLeft>
+            </Tilt>
          </FlexWrapper>
          <FlexWrapper
             width='440px'

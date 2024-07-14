@@ -39,6 +39,10 @@ const ContactTitle = styled.h4`
    font-size: 16px;
    font-weight: 700;
    line-height: 24px;
+
+   p {
+      display: none;
+   }
 `;
 const ContactForm = styled.form`
    display: flex;
