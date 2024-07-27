@@ -1,4 +1,4 @@
-svg {
+/* svg {
    width: 800px;
    height: 800px;
    transform: rotate(0);
@@ -24,4 +24,4 @@ svg {
    100% {
       transform: rotateX(360deg);
    }
-}
+} */

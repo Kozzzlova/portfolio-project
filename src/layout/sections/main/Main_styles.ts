@@ -94,9 +94,9 @@ const MainTItle = styled.h1`
    user-select: none;
    width: 100%;
    max-width: 655px;
-   /* height: 200px; */
-   /* position: relative; */
-   position: absolute;
+   height: 200px;
+   position: relative;
+   /* position: absolute; */
    z-index: 2;
 
    @media ${Theme.media.tablet} {
